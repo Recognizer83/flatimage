@@ -47,7 +47,7 @@ function _system_arch()
   # Clear root directory
   rm -rf "$dir_root"
   # Fetch bootstrap
-  git clone "https://github.com/ruanformigoni/arch-bootstrap.git"
+  git clone "https://github.com/Recognizer83/arch-bootstrap.git"
   # Build
   sed -Ei 's|^\s+curl|curl --retry 5|' ./arch-bootstrap/arch-bootstrap.sh
   sed 's/^/-- /' ./arch-bootstrap/arch-bootstrap.sh
