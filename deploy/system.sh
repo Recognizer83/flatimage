@@ -51,6 +51,7 @@ function _system_arch()
   # Build
   sed -Ei 's|^\s+curl|curl --retry 5|' ./arch-bootstrap/arch-bootstrap.sh
   sed 's/^/-- /' ./arch-bootstrap/arch-bootstrap.sh
+  chmod +x ./arch-bootstrap/arch-bootstrap.sh
   ./arch-bootstrap/arch-bootstrap.sh "$dir_root"
   # Update mirrorlist
   cp "$FIM_DIR/sources/arch.list" "$dir_root"/etc/pacman.d/mirrorlist
